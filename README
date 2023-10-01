@@ -1,4 +1,7 @@
 How to Run:
 1. Install python
 2. Run "py -m pip install pyautogui" in command prompt
-3. Run findBookmark.py
+3. Run "py -m pip install pynput"
+4. Run "py -m pip install mouse"
+5. Run "py -m pip install opencv-python"
+6. Run findBookmark.py
