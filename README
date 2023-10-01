@@ -1,3 +1,5 @@
+Recommended to use Google Play Games Beta on PC
+
 How to Run:
 1. Install python
 2. Run "py -m pip install pyautogui" in command prompt
@@ -5,3 +7,6 @@ How to Run:
 4. Run "py -m pip install mouse"
 5. Run "py -m pip install opencv-python"
 6. Run findBookmark.py
+
+#Note:
+For 4k monitors commment out the "Standard Monitor Settings" and uncomment the "4k Monitor Settings" as well as the "Standard Images" and "4k Images" in checkBoomarks()
