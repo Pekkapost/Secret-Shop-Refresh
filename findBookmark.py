@@ -50,20 +50,20 @@ listener.start()
 
 #Main function - Reads for mystic medal and covenant bookmarks
 def check_bookmarks():
-    print("Checking bookmarks")
+    #print("Checking bookmarks")
     time.sleep((random.random() * 0.2) + 1)
     #Standard Images
-    mysticLocation = pyautogui.locateOnScreen('Bookmarks/mystic.png', confidence = .6)
-    covLocation = pyautogui.locateOnScreen('Bookmarks/bookmark.png', confidence = .7)
+    #mysticLocation = pyautogui.locateOnScreen('Bookmarks/mystic.png', confidence = .6)
+    #covLocation = pyautogui.locateOnScreen('Bookmarks/bookmark.png', confidence = .7)
     #4k Images
-    mysticLocation = pyautogui.locateOnScreen('Bookmarks/mystic2.png', confidence = .9)
-    covLocation = pyautogui.locateOnScreen('Bookmarks/bookmark2.png', confidence = 1)
+    mysticLocation = pyautogui.locateOnScreen('Bookmarks/mystic2.png', confidence = .8)
+    covLocation = pyautogui.locateOnScreen('Bookmarks/bookmark2.png', confidence = .9)
     #Found mystic
     if mysticLocation != None:
         print("You have a mystic bookmark on screen")
         global mysticCount
         mysticCount += 1
-        print("Total mystic medals found: %d" %(mysticCount))
+        #print("Total mystic medals found: %d" %(mysticCount))
         click(mysticLocation[0]+offsetX,mysticLocation[1]+offsetY)
         time.sleep(random.random() + 1)
         click(confirmX,confirmY)
@@ -73,28 +73,28 @@ def check_bookmarks():
         print("You have a covenant bookmark on screen")
         global bookmarkCount
         bookmarkCount += 1
-        print("Total covenant medals found: %d" %(bookmarkCount))
+        #print("Total covenant medals found: %d" %(bookmarkCount))
         click(covLocation[0]+offsetX,covLocation[1]+offsetY)
         time.sleep(random.random() + 1)
         click(confirmX,confirmY)
         time.sleep(random.random() + 1)
-    print("Finished Checking bookmarks")
+    #print("Finished Checking bookmarks")
 
 #Scrolls the shop down
 def scroll():
-    print("Scrolling")
+    #print("Scrolling")
     mouse.drag(confirmX + (random.random()*100), confirmY + (random.random()*50), confirmX + (random.random()*100), confirmY-500 + (random.random()*100), absolute=True, duration=0.3)
     time.sleep((random.random() * 0.5) + 0.5)
-    print("Done Scrolling")
+    #print("Done Scrolling")
 
 #Clicks on the refresh shop
 def reset():
-    print("Resetting Shop")
+    #print("Resetting Shop")
     click(resetX + ((random.random() - 0.5) * 300),resetY + ((random.random() - 0.5) * 10))
     time.sleep((random.random() * 0.5) + 0.5)
     click(resetX2 + ((random.random() - 0.5) * 200),resetY2 + ((random.random() - 0.5) * 10))
     time.sleep((random.random() * 0.5) + 0.5)
-    print("Done Resetting Shop")
+    #print("Done Resetting Shop")
 
 #Clicks at a location (twice)
 def click(x,y):
@@ -106,15 +106,10 @@ def click(x,y):
 #Main function
 pulls = 0
 scrolled = False
-while pulls < total*2:
-    print("Loop: %d/%d Mystic: %d Covenant: %d" %(pulls/2,total,mysticCount,bookmarkCount))
+while pulls < total:
+    print("Loop: %d/%d Mystic: %d Covenant: %d" %(pulls,total,mysticCount,bookmarkCount))
     pulls += 1
     check_bookmarks()
-    #time.sleep((random.random() * 0.5) + 0.5)
-    if scrolled == False:
-        scroll()
-        scrolled = True
-    else:
-        reset()
-        scrolled = False
-   # time.sleep((random.random() * 0.5) + 0.5)
+    scroll()
+    check_bookmarks()
+    reset()
