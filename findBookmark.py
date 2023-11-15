@@ -5,6 +5,7 @@ import time
 from pynput import keyboard
 import random
 import mouse
+import pathlib
 
 # Total about of rolls (num * 3 = skystones used)
 total = 500
@@ -53,11 +54,20 @@ def check_bookmarks():
     #print("Checking bookmarks")
     time.sleep((random.random() * 0.2) + 1)
     #Standard Images
-    mysticLocation = pyautogui.locateOnScreen('Bookmarks/mystic.png', confidence = .6)
-    covLocation = pyautogui.locateOnScreen('Bookmarks/bookmark.png', confidence = .7)
+    mysticLocation = None
+    covLocation = None
+    try:
+        mysticLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\mystic.png', confidence = .6)
+        covLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\\bookmark.png', confidence = .7)
+    except:
+        pass
     #4k Images
-    # mysticLocation = pyautogui.locateOnScreen('Bookmarks/mystic2.png', confidence = .8)
-    # covLocation = pyautogui.locateOnScreen('Bookmarks/bookmark2.png', confidence = .9)
+    # try:
+    #     mysticLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\mystic2.png', confidence = .8)
+    #     covLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\\bookmark2.png', confidence = .9)
+    # except:
+    #     pass
+    
     #Found mystic
     if mysticLocation != None:
         print("You have a mystic bookmark on screen")
