@@ -54,19 +54,12 @@ def check_bookmarks():
     #print("Checking bookmarks")
     time.sleep((random.random() * 0.2) + 1)
     #Standard Images
-    mysticLocation = None
-    covLocation = None
-    try:
-        mysticLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\mystic.png', confidence = .6)
-        covLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\\bookmark.png', confidence = .7)
-    except:
-        pass
+    mysticLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\mystic.png', confidence = .6)
+    covLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\\bookmark.png', confidence = .7)
+
     #4k Images
-    # try:
-    #     mysticLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\mystic2.png', confidence = .8)
-    #     covLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\\bookmark2.png', confidence = .9)
-    # except:
-    #     pass
+    # mysticLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\mystic2.png', confidence = .8)
+    # covLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\\bookmark2.png', confidence = .9)
     
     #Found mystic
     if mysticLocation != None:
