@@ -1,4 +1,6 @@
-Recommended to use Google Play Games Beta on PC
+Recommended to use Google Play Games Beta on PC but any emulator will work.
+
+***IMPORTANT** Press 'q' on your keyboard to kill the script at any moment.
 
 How to Run:
 1. Install python.
@@ -15,6 +17,13 @@ How to Run:
 4. Run "py -m pip install mouse" in command prompt.
 5. Run "py -m pip install opencv-python in command prompt.
 6. Run findBookmark.py
+7. Quickly switch to Epic Seven
+
+Advanced Settings:
+1. If your script is passing over bookmarks make sure to check the confidence value in the python file.
+    a. Lower the the confidence value by .1 until the bookmark is being detected int he below lines:
+        mysticLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\mystic.png', confidence = .6)
+        covLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\\bookmark.png', confidence = .7)
 
 #Note:
 For 4k monitors commment out the "Standard Monitor Settings" and uncomment the "4k Monitor Settings" as well as the "Standard Images" and "4k Images" in checkBoomarks()
