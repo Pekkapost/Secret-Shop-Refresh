@@ -1,12 +1,27 @@
 Recommended to use Google Play Games Beta on PC
 
 How to Run:
-1. Install python
-2. Run "py -m pip install pyautogui" in command prompt
-3. Run "py -m pip install pynput"
-4. Run "py -m pip install mouse"
+1. Install python.
+    a. Verify this by opening command promot (or powershell) and run 'python'.
+    b. You should see something similar to the following:
+        C:\Users\drago>python
+        Python 3.11.4 (tags/v3.11.4:d2340ef, Jun  7 2023, 05:45:37) [MSC v.1934 64 bit (AMD64)] on win32
+        Type "help", "copyright", "credits" or "license" for more information.
+    c. Type "exit()" to leave back to the command prompt.
+    d. If you did not see the result from step b, you have not installed python properly.
+    e. Link for reference: https://cdn.discordapp.com/attachments/510260823025778699/1174481218176295052/image.png?ex=6567bfdf&is=65554adf&hm=c7c2407bdfa9bd0d60be7ccbfe2e4465dee9534c6197a3dc6afc8542eeb84a47&
+2. Run "py -m pip install pyautogui" in command prompt.
+3. Run "py -m pip install pynput".
+4. Run "py -m pip install mouse".
 5. Run "py -m pip install opencv-python"
-6. Run findBookmark.py
+6. Run "python findBookmark.py"
+    a. Make sure that you are in the correct file location in your command prompt.
+    b. You can get this location by rightclicking on the find bookmark folder and selecting "copy address as text"
+    c. Then run "cd " + paste the path above.
+        eg. "cd C:\Users\me\Downloads\Secret-Shop-Refresh"
+    d. Link for reference: https://cdn.discordapp.com/attachments/510260823025778699/1174480158737039360/image.png?ex=6567bee2&is=655549e2&hm=316f570d5fc953b4932451f7adcd0ea0f823c0f37c6444ee60d881cc35447f64&
+
 
 #Note:
 For 4k monitors commment out the "Standard Monitor Settings" and uncomment the "4k Monitor Settings" as well as the "Standard Images" and "4k Images" in checkBoomarks()
+For any questiosn contact Pekkapost on Discord.
