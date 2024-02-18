@@ -11,24 +11,24 @@ import pathlib
 total = 500
 
 #Config settings if you dont use standard monitor size
-confirmX = 1000
-confirmY = 750
-offsetX = 900
-offsetY = 100
-resetX = 350
-resetY = 950
-resetX2 = 1100
-resetY2 = 650
+# confirmX = 1000
+# confirmY = 750
+# offsetX = 900
+# offsetY = 100
+# resetX = 350
+# resetY = 950
+# resetX2 = 1100
+# resetY2 = 650
 
 #4k Monitor Settings
-# confirmX = 2220
-# confirmY = 1470
-# offsetX = 1660
-# offsetY = 200
-# resetX = 735
-# resetY = 1900
-# resetX2 = 2160
-# resetY2 = 1300
+confirmX = 2220
+confirmY = 1470
+offsetX = 1660
+offsetY = 200
+resetX = 735
+resetY = 1900
+resetX2 = 2160
+resetY2 = 1300
 
 #Ignore these
 mysticCount = 0
@@ -54,12 +54,12 @@ def check_bookmarks():
     #print("Checking bookmarks")
     time.sleep((random.random() * 0.2) + 1)
     #Standard Images
-    mysticLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\mystic.png', confidence = .6)
-    covLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\\bookmark.png', confidence = .7)
+    # mysticLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\mystic.png', confidence = .6)
+    # covLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\\bookmark.png', confidence = .7)
 
     #4k Images
-    # mysticLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\mystic2.png', confidence = .8)
-    # covLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\\bookmark2.png', confidence = .9)
+    mysticLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\mystic2.png', confidence = .8)
+    covLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + '\Bookmarks\\bookmark2.png', confidence = .9)
     
     #Found mystic
     if mysticLocation != None:
