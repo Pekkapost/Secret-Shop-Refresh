@@ -20,6 +20,16 @@ resetY = 950
 resetX2 = 1100
 resetY2 = 650
 
+#Ultrawide Monitor Settings
+# confirmX = 1000+((2560-1920)/2)
+# confirmY = 750
+# offsetX = 900+((2560-1920)/2)
+# offsetY = 100
+# resetX = 350+((2560-1920)/2)
+# resetY = 950
+# resetX2 = 1100+((2560-1920)/2)
+# resetY2 = 650
+
 #4k Monitor Settings
 # confirmX = 2220
 # confirmY = 1470
@@ -61,7 +71,7 @@ def check_bookmarks():
         pass
     covLocation=None
     try:
-        covLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + r'\Bpookmarks\bookmark.png', confidence = .7)
+        covLocation = pyautogui.locateOnScreen(str(pathlib.Path(__file__).parent.resolve()) + r'\Bookmarks\bookmark.png', confidence = .7)
     except:
         pass
 
